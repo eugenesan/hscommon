@@ -122,6 +122,10 @@ def setup_package_argparser(parser):
         '--arch-pkg', action='store_true', dest='arch_pkg',
         help="Force Arch Linux packaging type, regardless of distro name."
     )
+    parser.add_argument(
+        '--runtime-pkg', action='store_true', dest='runtime_pkg',
+        help="Build runtime package."
+    )
 
 # `args` come from an ArgumentParser updated with setup_package_argparser()
 def package_cocoa_app_in_dmg(app_path, destfolder, args):
