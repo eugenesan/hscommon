@@ -146,7 +146,7 @@ def pytest_funcarg__app(request):
             if name == 'self':
                 return request.function.__self__
             else:
-                return request.getfuncargvalue(name)
+                return request.getfixturevalue(name)
         args = [getarg(argname) for argname in argnames]
     else:
         args = []
